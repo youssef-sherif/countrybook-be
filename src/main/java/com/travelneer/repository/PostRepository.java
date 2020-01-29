@@ -6,7 +6,6 @@
 package com.travelneer.repository;
 
 import com.travelneer.post.Post;
-import org.jooq.SQL;
 
 import java.sql.SQLException;
 import java.util.List;

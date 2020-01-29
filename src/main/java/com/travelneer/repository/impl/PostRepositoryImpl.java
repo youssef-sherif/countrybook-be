@@ -8,7 +8,6 @@ package com.travelneer.repository.impl;
 import static com.travelneer.jooq.Tables.*;
 import static com.travelneer.jooq.tables.Favourites.FAVOURITES;
 import static org.jooq.impl.DSL.count;
-import static org.jooq.impl.DSL.user;
 
 
 import java.sql.SQLException;

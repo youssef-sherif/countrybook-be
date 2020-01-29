@@ -46,7 +46,12 @@ public class JwtAuthenticationProvider extends AbstractUserDetailsAuthentication
         String token = jwtAuthenticationToken.getToken();
 
         if(token == null) {
-            throw new AuthenticationException("Invalid JWT"){};
+            throw new AuthenticationException("Invalid JWT"){
+
+				/**
+				 *
+				 */
+				private static final long serialVersionUID = 1L;};
         }
         
         validator.validateToken(token);

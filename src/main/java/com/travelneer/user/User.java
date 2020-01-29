@@ -1,7 +1,5 @@
 package com.travelneer.user;
 
-import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.sql.Timestamp;

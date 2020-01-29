@@ -6,7 +6,6 @@
 package com.travelneer.jwt;
 
 import io.jsonwebtoken.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.stereotype.Service;
@@ -37,7 +36,13 @@ public class JwtValidator {
 
         } catch (MalformedJwtException | SignatureException | UnsupportedJwtException | IllegalArgumentException e) {
             System.out.println(e.getMessage());
-            throw new AuthenticationException("Invalid Token"){};
+            throw new AuthenticationException("Invalid Token"){
+
+                /**
+                 *
+                 */
+                private static final long serialVersionUID = 1L;
+            };
         }
     }
 

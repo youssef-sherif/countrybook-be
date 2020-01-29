@@ -16,6 +16,10 @@ import org.springframework.security.core.userdetails.UserDetails;
  */
 public class JwtUserDetails implements UserDetails {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
     private final String username;
     private final Date expiration;
     private final Integer userId;

@@ -1,8 +1,6 @@
 package com.travelneer.api.auth;
 
 import com.travelneer.comment.CommentFactory;
-import com.travelneer.comment.CommentTreeBuilder;
-import com.travelneer.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

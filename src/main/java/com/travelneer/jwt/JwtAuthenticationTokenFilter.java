@@ -32,6 +32,11 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
 
         if (header == null || !header.startsWith("Bearer ")) {
             throw new AuthenticationException("JWT is missing") {
+
+                /**
+                 *
+                 */
+                private static final long serialVersionUID = 1L;
             };
         }
         try {
@@ -40,6 +45,11 @@ public class JwtAuthenticationTokenFilter extends AbstractAuthenticationProcessi
             return getAuthenticationManager().authenticate(token);
         } catch (Exception e) {
             throw new AuthenticationException("Malformed JWT") {
+
+                /**
+                 *
+                 */
+                private static final long serialVersionUID = 1L;
             };
         }
 
