@@ -42,7 +42,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Post extends TableImpl<PostRecord> {
 
-    private static final long serialVersionUID = -1285264014;
+    private static final long serialVersionUID = -1461868598;
 
     /**
      * The reference instance of <code>travelneer.post</code>
@@ -160,15 +160,11 @@ public class Post extends TableImpl<PostRecord> {
      */
     @Override
     public List<ForeignKey<PostRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<PostRecord, ?>>asList(Keys.FK_POST_USER_ID, Keys.FK_POST_COUNTRY_CODE);
+        return Arrays.<ForeignKey<PostRecord, ?>>asList(Keys.FK_POST_USER_ID);
     }
 
     public User user() {
         return new User(this, Keys.FK_POST_USER_ID);
-    }
-
-    public Country country() {
-        return new Country(this, Keys.FK_POST_COUNTRY_CODE);
     }
 
     /**

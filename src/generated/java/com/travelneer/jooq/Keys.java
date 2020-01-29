@@ -82,9 +82,7 @@ public class Keys {
     public static final ForeignKey<FavouritesRecord, PostRecord> FK_FAVOURITES_POST_ID = ForeignKeys0.FK_FAVOURITES_POST_ID;
     public static final ForeignKey<FavouritesRecord, UserRecord> FK_FAVOURITES_USER_ID = ForeignKeys0.FK_FAVOURITES_USER_ID;
     public static final ForeignKey<PostRecord, UserRecord> FK_POST_USER_ID = ForeignKeys0.FK_POST_USER_ID;
-    public static final ForeignKey<PostRecord, CountryRecord> FK_POST_COUNTRY_CODE = ForeignKeys0.FK_POST_COUNTRY_CODE;
     public static final ForeignKey<UserRolesRecord, UserRecord> FK_USER_ROLES_USER_ID = ForeignKeys0.FK_USER_ROLES_USER_ID;
-    public static final ForeignKey<UserRolesRecord, RoleRecord> FK_USER_ROLES_ROLE_ID = ForeignKeys0.FK_USER_ROLES_ROLE_ID;
 
     // -------------------------------------------------------------------------
     // [#1459] distribute members to avoid static initialisers > 64kb
@@ -122,8 +120,6 @@ public class Keys {
         public static final ForeignKey<FavouritesRecord, PostRecord> FK_FAVOURITES_POST_ID = Internal.createForeignKey(com.travelneer.jooq.Keys.KEY_POST_PRIMARY, Favourites.FAVOURITES, "fk_favourites_post_id", Favourites.FAVOURITES.POST_ID);
         public static final ForeignKey<FavouritesRecord, UserRecord> FK_FAVOURITES_USER_ID = Internal.createForeignKey(com.travelneer.jooq.Keys.KEY_USER_PRIMARY, Favourites.FAVOURITES, "fk_favourites_user_id", Favourites.FAVOURITES.USER_ID);
         public static final ForeignKey<PostRecord, UserRecord> FK_POST_USER_ID = Internal.createForeignKey(com.travelneer.jooq.Keys.KEY_USER_PRIMARY, Post.POST, "fk_post_user_id", Post.POST.AUTHOR_ID);
-        public static final ForeignKey<PostRecord, CountryRecord> FK_POST_COUNTRY_CODE = Internal.createForeignKey(com.travelneer.jooq.Keys.KEY_COUNTRY_CODE, Post.POST, "fk_post_country_code", Post.POST.COUNTRY_CODE);
         public static final ForeignKey<UserRolesRecord, UserRecord> FK_USER_ROLES_USER_ID = Internal.createForeignKey(com.travelneer.jooq.Keys.KEY_USER_PRIMARY, UserRoles.USER_ROLES, "fk_user_roles_user_id", UserRoles.USER_ROLES.USER_ID);
-        public static final ForeignKey<UserRolesRecord, RoleRecord> FK_USER_ROLES_ROLE_ID = Internal.createForeignKey(com.travelneer.jooq.Keys.KEY_ROLE_PRIMARY, UserRoles.USER_ROLES, "fk_user_roles_role_id", UserRoles.USER_ROLES.ROLE_ID);
     }
 }

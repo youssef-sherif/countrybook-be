@@ -40,7 +40,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class UserRoles extends TableImpl<UserRolesRecord> {
 
-    private static final long serialVersionUID = -1553136407;
+    private static final long serialVersionUID = -804048537;
 
     /**
      * The reference instance of <code>travelneer.user_roles</code>
@@ -135,15 +135,11 @@ public class UserRoles extends TableImpl<UserRolesRecord> {
      */
     @Override
     public List<ForeignKey<UserRolesRecord, ?>> getReferences() {
-        return Arrays.<ForeignKey<UserRolesRecord, ?>>asList(Keys.FK_USER_ROLES_USER_ID, Keys.FK_USER_ROLES_ROLE_ID);
+        return Arrays.<ForeignKey<UserRolesRecord, ?>>asList(Keys.FK_USER_ROLES_USER_ID);
     }
 
     public User user() {
         return new User(this, Keys.FK_USER_ROLES_USER_ID);
-    }
-
-    public Role role() {
-        return new Role(this, Keys.FK_USER_ROLES_ROLE_ID);
     }
 
     /**
